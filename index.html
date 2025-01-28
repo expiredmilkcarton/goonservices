@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Goon Services</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #1a1a1a;
+      color: #ffffff;
+      overflow: hidden;
+    }
+
+    .welcome {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      font-size: 2em;
+      animation: fadeIn 3s ease-in-out forwards;
+    }
+
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+        transform: scale(0.8);
+      }
+      100% {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    .content {
+      display: none;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .tabs {
+      margin-top: 20px;
+    }
+
+    .tabs button {
+      background-color: #333;
+      color: white;
+      padding: 10px 20px;
+      margin: 5px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 1em;
+    }
+
+    .tabs button:hover {
+      background-color: #555;
+    }
+  </style>
+</head>
+<body>
+  <div class="welcome">Welcome to Goon Services</div>
+  <div class="content">
+    <h1>Goon Services</h1>
+    <p>Choose an option below:</p>
+    <div class="tabs">
+      <button onclick="alert('Cheat Services Selected')">Cheat Services</button>
+      <button onclick="alert('Contact Us Selected')">Contact Us</button>
+      <button onclick="alert('About Us Selected')">About Us</button>
+    </div>
+  </div>
+
+  <script>
+    setTimeout(() => {
+      document.querySelector('.welcome').style.display = 'none';
+      document.querySelector('.content').style.display = 'block';
+    }, 3000);
+  </script>
+</body>
+</html>
