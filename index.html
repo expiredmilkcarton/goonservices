@@ -4,11 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Goon Services</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: #1a1a1a;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #1f1f1f, #3b3b3b);
       color: #ffffff;
       overflow: hidden;
     }
@@ -18,18 +19,20 @@
       justify-content: center;
       align-items: center;
       height: 100vh;
-      font-size: 2em;
+      text-align: center;
+      font-size: 3em;
+      font-weight: 600;
       animation: fadeIn 3s ease-in-out forwards;
     }
 
     @keyframes fadeIn {
       0% {
         opacity: 0;
-        transform: scale(0.8);
+        transform: translateY(20px);
       }
       100% {
         opacity: 1;
-        transform: scale(1);
+        transform: translateY(0);
       }
     }
 
@@ -39,28 +42,47 @@
       padding: 20px;
     }
 
+    .content h1 {
+      font-size: 2.5em;
+      margin-bottom: 10px;
+      color: #ffcc00;
+    }
+
+    .content p {
+      font-size: 1.2em;
+      margin-bottom: 20px;
+    }
+
     .tabs {
       margin-top: 20px;
     }
 
     .tabs button {
-      background-color: #333;
+      background: linear-gradient(135deg, #ff9900, #ff6600);
       color: white;
-      padding: 10px 20px;
-      margin: 5px;
+      padding: 15px 25px;
+      margin: 10px;
       border: none;
-      border-radius: 5px;
+      border-radius: 30px;
       cursor: pointer;
       font-size: 1em;
+      font-weight: 600;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+      transition: transform 0.2s, box-shadow 0.2s;
     }
 
     .tabs button:hover {
-      background-color: #555;
+      transform: scale(1.05);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+    }
+
+    .tabs button:active {
+      transform: scale(0.95);
     }
   </style>
 </head>
 <body>
-  <div class="welcome">Welcome to Goon Services</div>
+  <div class="welcome">Welcome to <br><span style="color: #ffcc00;">Goon Services</span></div>
   <div class="content">
     <h1>Goon Services</h1>
     <p>Choose an option below:</p>
